@@ -23,8 +23,8 @@ envelope.addEventListener("click", () => {
 // Logic to move the NO btn
 
 noBtn.addEventListener("mouseover", () => {
-    const min = 200;
-    const max = 200;
+    const min = 100;
+    const max = 300;
 
     const distance = Math.random() * (max - min) + min;
     const angle = Math.random() * Math.PI * 2;
@@ -38,29 +38,29 @@ noBtn.addEventListener("mouseover", () => {
 
 // Logic to make YES btn to grow
 
-// let yesScale = 1;
+let yesScale = 1;
 
-// yesBtn.style.position = "relative"
-// yesBtn.style.transformOrigin = "center center";
-// yesBtn.style.transition = "transform 0.3s ease";
+yesBtn.style.position = "relative"
+yesBtn.style.transformOrigin = "center center";
+yesBtn.style.transition = "transform 0.3s ease";
 
-// noBtn.addEventListener("click", () => {
-//     yesScale += 2;
+noBtn.addEventListener("click", () => {
+    yesScale += 0.5;
 
-//     if (yesBtn.style.position !== "fixed") {
-//         yesBtn.style.position = "fixed";
-//         yesBtn.style.top = "50%";
-//         yesBtn.style.left = "50%";
-//         yesBtn.style.transform = `translate(-50%, -50%) scale(${yesScale})`;
-//     }else{
-//         yesBtn.style.transform = `translate(-50%, -50%) scale(${yesScale})`;
-//     }
-// });
+    if (yesBtn.style.position !== "fixed") {
+        yesBtn.style.position = "fixed";
+        yesBtn.style.top = "50%";
+        yesBtn.style.left = "50%";
+        yesBtn.style.transform = `translate(-50%, -50%) scale(${yesScale})`;
+    }else{
+        yesBtn.style.transform = `translate(-50%, -50%) scale(${yesScale})`;
+    }
+});
 
 // YES is clicked
 
 yesBtn.addEventListener("click", () => {
-    title.textContent = "Yippeeee!";
+    title.textContent = "Lessss goooooooooooooo!";
 
     catImg.src = "cat_dance.gif";
 
